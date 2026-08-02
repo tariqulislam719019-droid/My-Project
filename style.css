@@ -1,0 +1,169 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f2f5;
+    font-family: 'Segoe UI', 'Noto Sans Bengali', Arial, sans-serif;
+    padding: 1rem;
+}
+
+/* ===== পণ্য কার্ড ===== */
+.product-card {
+    max-width: 340px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    padding: 1.8rem 1.5rem 2rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== ছবি ===== */
+.product-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.2rem;
+    background: linear-gradient(145deg, #eef2f7, #d9e0e8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.2rem;
+    box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.04),
+        0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.02);
+}
+
+.image-icon {
+    line-height: 1;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.08));
+}
+
+/* ===== পণ্যের নাম ===== */
+.product-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a2634;
+    letter-spacing: -0.3px;
+    margin-bottom: 0.35rem;
+}
+
+/* ===== রেটিং ===== */
+.product-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 0.6rem;
+}
+
+.star {
+    font-size: 1.25rem;
+    color: #f5a623;
+    letter-spacing: 0;
+}
+
+.rating-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6b7a8a;
+    margin-left: 6px;
+}
+
+/* ===== দাম ===== */
+.product-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0b2b3f;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.5px;
+}
+
+/* ===== বিবরণ ===== */
+.product-description {
+    font-size: 1rem;
+    color: #4a5a6a;
+    margin-bottom: 1.6rem;
+    font-weight: 500;
+    background: #f6f9fc;
+    display: inline-block;
+    padding: 0.3rem 1.2rem;
+    border-radius: 40px;
+    letter-spacing: 0.2px;
+}
+
+/* ===== বাটন ===== */
+.add-to-cart {
+    width: 100%;
+    padding: 0.9rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #0b2b3f;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.15s ease;
+    box-shadow: 0 6px 18px rgba(11, 43, 63, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0.3px;
+}
+
+.add-to-cart:hover {
+    background: #1a405a;
+    transform: scale(1.01);
+}
+
+.add-to-cart:active {
+    transform: scale(0.97);
+    box-shadow: 0 3px 10px rgba(11, 43, 63, 0.20);
+}
+
+/* ===== রেসপন্সিভ ===== */
+@media (max-width: 420px) {
+    .product-card {
+        padding: 1.4rem 1.2rem 1.6rem;
+    }
+
+    .product-image {
+        width: 100px;
+        height: 100px;
+        font-size: 3.4rem;
+    }
+
+    .product-title {
+        font-size: 1.3rem;
+    }
+
+    .product-price {
+        font-size: 1.7rem;
+    }
+
+    .add-to-cart {
+        font-size: 1rem;
+        padding: 0.8rem 0;
+    }
+}
